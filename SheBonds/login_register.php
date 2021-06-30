@@ -172,7 +172,7 @@
 	</script>
 </head>
 
-<body background="image\bg.png" >
+<body background="image\service-bg.png" >
 	<!--Login form-->
 	<form method="POST" class="loginform" action="login_register.php">
 		<br><br>

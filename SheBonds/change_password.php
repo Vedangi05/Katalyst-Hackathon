@@ -60,6 +60,34 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- Site Metas -->
+   <title>Life Care - Responsive HTML5 Multi Page Template</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css">
+   <!-- Modernizer for Portfolio -->
+   <script src="js/modernizer.js"></script>
+   <!-- [if lt IE 9] -->
 	<style>
 		a:hover{
 			font-size: 24px;
@@ -126,7 +154,7 @@
 		}
 	</style>
 </head>
-<body background="image\bg.png">
+<body background="image\service-bg.png">
 	<form action="change_password.php" method="POST">
 		<table>
 			<tr>

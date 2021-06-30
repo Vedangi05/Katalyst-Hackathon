@@ -15,6 +15,8 @@
 <html>
 <head>
 	<title></title>
+
+	
 	<style>
 		a:hover{
 			font-size: 24px;
@@ -130,7 +132,7 @@
 	    });
 	</script>
 </head>
-<body background="image\bg.png">
+<body background="image\service-bg.png">
 	<form action="edit_profile.php" method="POST">
 		<table cellspacing="1">
 			<tr><th colspan="3">My Profile</th></tr>

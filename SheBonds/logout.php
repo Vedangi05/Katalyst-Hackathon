@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 </head>
-<body background="image\bg.png" style="margin-top: 30px;text-align: center;">
+<body background="image\service-bg.png" style="margin-top: 30px;text-align: center;">
 <?php
 	session_start();
 	if (isset($_SESSION['UserFullName'])){
