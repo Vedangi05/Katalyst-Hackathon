@@ -86,7 +86,7 @@
 			font-size: 18px;
 			text-align: center;
 			padding-top: 2px ;
-			padding-bottom: 2px ;
+			padding-bottom: 2px;
 		}
 		input[type=submit], input[type=reset]{
 			padding: 10px;

@@ -4,7 +4,12 @@
 	
 	//Read session
 	include 'session.php';
-
+    $uid=$_SESSION['UserID'];
+	if($uid=='' || $uid==null){
+		$message="Please login to continue";
+		echo "<script type='text/javascript'>alert('$message');</script>";
+		header("Refresh: 0, login_register.php");
+	}
 	//Read button script
 	include "top_button.html";
 ?>
@@ -98,7 +103,7 @@
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 	
 	<div class="top">
-		<h1>Patient UNIVERSITY EVENTS</h1>
+		<h1>Admin UNIVERSITY EVENTS</h1>
 	</div>
 	
 
@@ -117,7 +122,8 @@
 			$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 			//Read all event
-			$read_DB = "SELECT * FROM event_details where EventDate >= CURDATE() ORDER BY EventDate DESC";
+			// $read_DB = "SELECT * FROM event_details where EventDate >= CURDATE() ORDER BY EventDate DESC";
+            $read_DB = "SELECT * FROM event_details where UserID='$uid' AND EventDate >= CURDATE() ORDER BY EventDate DESC";
 			$result = mysqli_query($conn, $read_DB);
 			
 			//Display all result
@@ -127,11 +133,9 @@
         			echo "<tr><td><input class ='event_name'  type='text' name='eventname' value='".$row['EventName']."' size=65 readonly></td></tr>";
         			echo "<tr><td><span  style='font-size:16px'><hr>". $row['EventDescription']."</td></tr>";
         			echo "<tr><td><br></td></tr>";
-        			echo "<tr><td style='text-align:center'><input type='submit' name='more_detail'  class='btn small' value='Register now'/></td></tr>";
+        			echo "<tr><td style='text-align:center'><input type='submit' name='more_detail'  class='btn small' value='More Details'/></td></tr>";
         			echo "<tr><td><br></td></tr>";
-        			echo "</table></form><br>";
-
-					
+        			echo "</table></form><br>";	
     			}
 			}
 		?>
@@ -145,7 +149,9 @@
 			$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 			//Read all event
-			$read_DB = "SELECT * FROM event_details where EventDate <= CURDATE() ORDER BY EventDate DESC";
+			// $read_DB = "SELECT * FROM event_details where EventDate <= CURDATE() ORDER BY EventDate DESC";
+            $read_DB = "SELECT * FROM event_details where UserID='$uid' AND EventDate <= CURDATE() ORDER BY EventDate DESC";
+            
 			$result = mysqli_query($conn, $read_DB);
 			
 			//Display all result
